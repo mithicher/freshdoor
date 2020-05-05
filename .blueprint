@@ -1,0 +1,30 @@
+created:
+    - database/migrations/2020_05_04_074614_create_categories_table.php
+    - database/migrations/2020_05_04_074615_create_shops_table.php
+    - database/migrations/2020_05_04_074616_create_products_table.php
+    - database/migrations/2020_05_04_074617_create_coupons_table.php
+    - database/migrations/2020_05_04_074618_create_offers_table.php
+    - database/migrations/2020_05_04_074619_create_addresses_table.php
+    - database/migrations/2020_05_04_074620_create_orders_table.php
+    - app/Category.php
+    - app/Shop.php
+    - app/Product.php
+    - app/Coupon.php
+    - app/Offer.php
+    - app/Address.php
+    - app/Order.php
+    - database/factories/CategoryFactory.php
+    - database/factories/ShopFactory.php
+    - database/factories/ProductFactory.php
+    - database/factories/CouponFactory.php
+    - database/factories/OfferFactory.php
+    - database/factories/AddressFactory.php
+    - database/factories/OrderFactory.php
+models:
+    Category: { name: string, slug: 'string unique' }
+    Shop: { name: string, slug: 'string unique' }
+    Product: { uuid: 'string unique', category_id: 'id index', shop_id: 'id index', name: string, description: 'string nullable', slug: 'string unqiue', image: 'string nullable', price: 'decimal:8,2', discount: 'decimal:8,2 nullable', available: 'boolean default:true' }
+    Order: { user_id: 'id index', orderno: 'string unique', address: string, city: string, pincode: string, phone: 'string nullable', amount: 'decimal:8,2', discount_amount: 'decimal:8,2', net_total: 'decimal:8,2', status: 'string default:''pending''', payment: string, payment_id: string, products: json }
+    Coupon: { uuid: 'string unique', name: 'string unique', description: 'string nullable', price: 'decimal:8,2', start: date, end: date, active: boolean }
+    Offer: { product_id: 'id index' }
+    Address: { user_id: 'id index', address: string, city: string, pincode: string, phone: 'string nullable', default: 'boolean default:false' }
