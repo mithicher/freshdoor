@@ -19,7 +19,9 @@ class CategoriesTableSeeder extends Seeder
             'Households', 
             'Veggies & Fruits', 
             'Kitchen', 
-            'Bread & Bakery' 
+            'Bread & Bakery',
+            'Dairy & Eggs',
+            'Drinks & Juice'
         ];
 
         foreach ($categories as $category) {

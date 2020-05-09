@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/products', 'products.index');
+Route::view('/products', 'products.index')->name('products');
 Route::view('/cart', 'products.cart')->name('cart');
 
 Route::view('/checkout', 'products.checkout')->name('checkout')->middleware('auth', 'cart');
@@ -28,6 +28,11 @@ Route::post('/checkout/pay', 'OrdersController@store')->name('orders.store')->mi
 Route::view('/order-complete', 'orders.complete')->name('orders.complete')->middleware('auth');
 Route::view('/order-history', 'orders.history')->name('orders.history')->middleware('auth');
 
-Auth::routes();
+Route::view('/signup', 'auth.register')->name('signup');
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::view('/promotions/create', 'promotions.create');
+Route::get('/promotions/stream', 'PromotionsController@promotions');
+

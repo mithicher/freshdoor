@@ -1,0 +1,128 @@
+[
+	{
+		"name": "Fresh Apples (1.5kg)",
+		"price": 150,
+		"discount": 140,
+		"image": "01.png",
+		"category_id": 3
+	},
+	{
+		"name": "Bananas (12 pc)",
+		"price": 80,
+		"discount": 60,
+		"image": "02.png",
+		"category_id": 3
+	},
+	{
+		"name": "Ginger (4 pc)",
+		"price": 50,
+		"discount": 0,
+		"image": "04.png",
+		"category_id": 3
+	},
+	{
+		"name": "Fresh Green Cabbage (2 pc)",
+		"price": 80,
+		"discount": 60,
+		"image": "05.png",
+		"category_id": 3
+	},
+	{
+		"name": "Fresh Oranges (1kg)",
+		"price": 70,
+		"discount": 0,
+		"image": "06.png",
+		"category_id": 3
+	},
+	{
+		"name": "Big Potatoes (1kg)",
+		"price": 70,
+		"discount": 60,
+		"image": "07.png",
+		"category_id": 3
+	},
+	{
+		"name": "Big Pumpkin (1 pc)",
+		"price": 80,
+		"discount": 60,
+		"image": "08.png",
+		"category_id": 3
+	},
+	{
+		"name": "Fresh Green Spinach",
+		"price": 100,
+		"discount": 80,
+		"image": "09.png",
+		"category_id": 3
+	},
+	{
+		"name": "Medium Size Tomatoes (1 kg)",
+		"price": 60,
+		"discount": 0,
+		"image": "10.png",
+		"category_id": 3
+	},
+	{
+		"name": "White Eggs (6 pc)",
+		"price": 60,
+		"discount": 55,
+		"image": "03.png",
+		"category_id": 6
+	},
+	{
+		"name": "Milk (1 ltr)",
+		"price": 120,
+		"discount": 100,
+		"image": "11.jpeg",
+		"category_id": 6
+	},
+	{
+		"name": "Pepsi Soda Can (.33 ml)",
+		"price": 150,
+		"discount": 140,
+		"image": "03.jpg",
+		"category_id": 7
+	},
+	{
+		"name": "Mineral Water (1 ltr)",
+		"price": 25,
+		"discount": 20,
+		"image": "01.jpeg",
+		"category_id": 7
+	},
+	{
+		"name": "Men's Shampoo (400 ml)",
+		"price": 125,
+		"discount": 100,
+		"image": "09.jpg",
+		"category_id": 2
+	},
+	{
+		"name": "Germ-XYZ Hand Sanitizer (30 ml)",
+		"price": 150,
+		"discount": 0,
+		"image": "04.jpeg",
+		"category_id": 2
+	},
+	{
+		"name": "Soft Cream Cheese (230 gm)",
+		"price": 150,
+		"discount": 0,
+		"image": "02.jpg",
+		"category_id": 1
+	},
+	{
+		"name": "Nut Chocolate Paste (750 gm)",
+		"price": 200,
+		"discount": 180,
+		"image": "06.jpg",
+		"category_id": 1
+	},
+	{
+		"name": "Mustard Oil (1 ltr)",
+		"price": 100,
+		"discount": 80,
+		"image": "12.jpg",
+		"category_id": 1
+	}
+]

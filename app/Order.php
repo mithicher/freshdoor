@@ -83,4 +83,16 @@ class Order extends Model
     {
         return $this->belongsTo(\App\User::class);
     }
+
+    public function scopeOfUser($query)
+    {
+        return $query->where('user_id', auth()->user()->id);
+    }
+
+    public function scopeOrderStatus($query, $status)
+    {
+        if ($status === 'all') return $this;
+        
+        return $query->where('status', $status);
+    }
 }

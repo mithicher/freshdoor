@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Product;
+use App\Category;
 use App\Facades\Cart;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -11,7 +12,17 @@ class Products extends Component
 {
     use WithPagination;
 
-    // protected $updatesQueryString = ['search'];
+    protected $updatesQueryString = ['search', 'category', 'price'];
+
+    public $search;
+    public $category = [];
+    public $price = [];
+
+    public function mount()
+    {
+        $this->search = request('search', '');
+        $this->category = request('category') ?? [];
+    }
 
     public function addToCart($productId, $quantity)
     {
@@ -39,7 +50,14 @@ class Products extends Component
     public function render()
     {
         return view('livewire.products', [
-            'products' => Product::paginate(12)->withPath('/products')
+            'products' => Product::query()
+                ->with(['shop', 'category'])
+                ->filterByCategory($this->category)
+                ->whereLike(['name', 'price', 'category.name', 'shop.name'], $this->search)
+                ->latest('id')
+                ->paginate(12)
+                ->withPath('/products'),
+            'categories' => Category::select('name', 'slug')->get()
         ]);
     }
 }

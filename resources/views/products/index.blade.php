@@ -3,6 +3,6 @@
 	description="All Products Page"
 >
 	<x-centeredcontainer>
-		@livewire('products')
+		<livewire:products />
 	</x-centeredcontainer>
 </x-layout>

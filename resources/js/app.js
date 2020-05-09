@@ -1,12 +1,12 @@
-require('./bootstrap');
+require("./bootstrap");
 
-import 'alpinejs'
-import Toasted from 'toastedjs'
+import "alpinejs";
+import Toasted from "toastedjs";
 
-window.toasted = new Toasted({  
-	position : 'bottom-left',
-	theme: 'alive',
-	duration: 3000
+window.toasted = new Toasted({
+    position: "bottom-left",
+    theme: "alive",
+    duration: 3500
 });
 
-console.log(window.toasted);
+// console.log(window.toasted);

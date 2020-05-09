@@ -1,18 +1,21 @@
 <div
-	class="bg-white shadow rounded-lg"
+	class="bg-white shadow rounded-lg overflow-hidden"
 >
 	<a 
-		href="{{ $to ?? '#'}}"
-		class="px-4 py-2 block"
-	>{{ $title }}</a>
-
-	<a 
-		class="h-32 my-4 block" 
+		class="h-32 mb-3 block" 
 		href="{{ $to ?? '#' }}"
 	>
 		<img src="{{ $image ?? '' }}" alt="product image" class="object-contain h-32 w-full">
 	</a>
 
+	<a 
+		href="{{ $to ?? '#'}}"
+		class="px-4 mb-1 block leading-tight font-medium truncate text-gray-700"
+		title="{{ $title }}"
+	>{{ $title }}</a>
+
+	<div class="text-xs text-gray-600 px-4">{{ $category }}</div>
+	 
 	<div class="flex justify-between items-center px-4 py-2">
 		<div>
 			@if ($discount ?? false)

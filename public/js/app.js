@@ -25240,11 +25240,10 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.toasted = new toastedjs__WEBPACK_IMPORTED_MODULE_1__["default"]({
-  position: 'bottom-left',
-  theme: 'alive',
-  duration: 3000
-});
-console.log(window.toasted);
+  position: "bottom-left",
+  theme: "alive",
+  duration: 3500
+}); // console.log(window.toasted);
 
 /***/ }),
 

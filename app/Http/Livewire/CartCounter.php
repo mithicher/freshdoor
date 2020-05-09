@@ -8,7 +8,7 @@ use Livewire\Component;
 class CartCounter extends Component
 {
     public $cartTotal = 0;
-
+     
     protected $listeners = [
         'productAdded' => 'updateCartTotal',
         'productRemoved' => 'updateCartTotal',

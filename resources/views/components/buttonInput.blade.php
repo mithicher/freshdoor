@@ -11,7 +11,7 @@ if (isset($variant) && $variant === 'secondary') {
 	name="{{ $name ?? '' }}"
 	{{ 
 		$attributes->merge([
-			'class' => 'inline-block relative shadow border border transparent font-bold py-2 px-4 text-center rounded-lg truncate leading-loose focus:outline-none focus:shadow-outline leading-tight ' . $variantClass
+			'class' => 'transition inline-block relative shadow border border transparent font-bold py-2 px-4 text-center rounded-lg truncate leading-loose focus:outline-none focus:shadow-outline leading-tight ' . $variantClass
 		])
 	}}
 >

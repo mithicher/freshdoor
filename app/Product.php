@@ -48,4 +48,22 @@ class Product extends Model
     {
         return $this->belongsTo(\App\Shop::class);
     }
+
+    public function scopeFilterByCategory($query, $filters)
+    {
+         
+        if ($filters) {
+            if (is_array($filters)) {
+                return $this->whereHas('category', function($query) use ($filters) {
+                    return $query->whereIn('slug', $filters);
+                });
+            } else {
+                return $this->whereHas('category', function($query) use ($filters) {
+                    return $query->where('slug', $filters);
+                });
+            }
+        }
+        
+        return $this;
+    }
 }

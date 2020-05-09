@@ -11,7 +11,7 @@
 			id="{{ $name }}" 
 			autocomplete="off"
         	type="{{ $type ?? 'text' }}"
-            class="px-3 py-2 block w-full text-gray-800 bg-white font-sans rounded-lg text-left appearance-none focus:outline-none focus:shadow-outline bg-white shadow-sm border {{ $errors->has($name) ? ' border-red-500 bg-red-100' : ' border-gray-300' }}"
+            class="form-input transition px-3 py-2 block w-full text-gray-800 bg-white font-sans rounded-lg text-left appearance-none focus:outline-none bg-white shadow-sm border {{ $errors->has($name) ? ' border-red-500 bg-red-100' : ' border-gray-300' }}"
             name="{{ $name }}" 
 			placeholder="{{ $placeholder ?? '' }}"
             value="{{ old($name, $value ?? '') }}"

@@ -1,4 +1,13 @@
 models:
+  Promotion:
+    description: string
+    link: string
+    active: boolean default:true
+
+  Otp:
+    code: string
+    used: boolean default:false
+
   Category:
     name: string
     slug: string unique
@@ -11,7 +20,7 @@ models:
     uuid: string unique
     category_id: id index
     shop_id: id index
-    name: string
+    name: string index
     description: string nullable
     slug: string unqiue
     image: string nullable
@@ -38,7 +47,7 @@ models:
     pincode: string
     phone: string nullable
     default: boolean default:false
-  
+
   Order:
     user_id: id index
     orderno: string unique

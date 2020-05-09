@@ -114,7 +114,7 @@ button {
 	overflow: hidden;
 	cursor: not-allowed;
 }
-/* .base-spinner:before {
+.base-spinner:before {
     content: "";
     box-sizing: border-box;
     position: absolute;
@@ -125,18 +125,17 @@ button {
     z-index: 1;
     top: 0;
     left: 0;
-} */
+}
 .base-spinner:after {
     content: "";
     box-sizing: border-box;
     position: absolute;
     top: 50%;
-	left: auto;
-	right: 0;
+    left: 50%;
     width: 20px;
     height: 20px;
     margin-top: -10px;
-    margin-right: 20px;
+    margin-left: -10px;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.45);
     border-top-color: inherit;
@@ -144,7 +143,23 @@ button {
     z-index: 2;
 }
 
-
 .StripeElement--focus {
 	@apply shadow-outline;
+}
+
+
+.form-input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(164,202,254,.45);
+    border-color: #a4cafe;
+}
+
+.global-search .form-select {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.global-search .form-search {
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
 }

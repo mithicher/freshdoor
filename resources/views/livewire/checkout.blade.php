@@ -99,7 +99,7 @@
         </div>
     </x-centeredcontainer>
 
-    <div class="fixed bottom-0 left-0 right-0 py-4 md:py-5 bg-white shadow-md">
+    <div class="fixed bottom-0 left-0 right-0 py-4 md:py-5 bg-white shadow-md border-t border-gray-200">
         <div class="md:max-w-4xl mx-auto px-4">
             <div class="flex justify-between -mx-4">
                 <div class="w-1/2 px-4">
